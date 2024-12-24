@@ -63,29 +63,31 @@ SimpleRulerPicker(
   labelColor: Colors.black,
   lineStroke: 3,
   height: 120,
+  axis: Axis.horizontal,
 )
 
 ```
 
 ## Properties
 
-| Property             | Type                | Default         | Description                                                                                            | Example                                   |
-| -------------------- | ------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------- |
-| `minValue`           | `int`               | 0               | The minimum value that can be selected.                                                                | `minValue: 0`                             |
-| `maxValue`           | `int`               | 200             | The maximum value that can be selected.                                                                | `maxValue: 100`                           |
-| `initialValue`       | `int`               | 100             | The initial value displayed when the picker is first shown. Must be between `minValue` and `maxValue`. | `initialValue: 50`                        |
-| `scaleLabelSize`     | `double`            | `14`            | The size of the text for the scale labels.                                                             | `scaleLabelSize: 16`                      |
-| `scaleLabelWidth`    | `double`            | `40`            | The width of the text for the scale labels when axis is vertical.                                      | `scaleLabelWidth: 40`                     |
-| `scaleBottomPadding` | `double`            | `6`             | Padding below the scale labels, creating space between the labels and the bottom of the picker.        | `scaleBottomPadding: 8`                   |
-| `scaleItemWidth`     | `int`               | `10`            | The width of each scale item (i.e., the distance between the lines on the ruler).                      | `scaleItemWidth: 15`                      |
-| `onValueChanged`     | `ValueChanged<int>` | null            | Callback triggered whenever the selected value changes.                                                | `onValueChanged: (value) => print(value)` |
-| `longLineHeight`     | `double`            | `24`            | Height of the long lines in the ruler (typically for major units).                                     | `longLineHeight: 30`                      |
-| `shortLineHeight`    | `double`            | `12`            | Height of the short lines in the ruler (typically for minor units).                                    | `shortLineHeight: 15`                     |
-| `lineColor`          | `Color`             | `Colors.grey`   | Color of the ruler's lines (both long and short).                                                      | `lineColor: Colors.black`                 |
-| `selectedColor`      | `Color`             | `Colors.orange` | Color of the selected item on the ruler.                                                               | `selectedColor: Colors.blue`              |
-| `labelColor`         | `Color`             | `Colors.grey`   | Color of the scale labels.                                                                             | `labelColor: Colors.black`                |
-| `lineStroke`         | `double`            | `2`             | The thickness (stroke width) of the ruler's lines.                                                     | `lineStroke: 3`                           |
-| `height`             | `double`            | `100`           | The overall height of the ruler picker.                                                                | `height: 120`                             |
+| Property             | Type                | Default           | Description                                                                                            | Example                                   |
+| -------------------- | ------------------- | ----------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------- |
+| `minValue`           | `int`               | 0                 | The minimum value that can be selected.                                                                | `minValue: 0`                             |
+| `maxValue`           | `int`               | 200               | The maximum value that can be selected.                                                                | `maxValue: 100`                           |
+| `initialValue`       | `int`               | 100               | The initial value displayed when the picker is first shown. Must be between `minValue` and `maxValue`. | `initialValue: 50`                        |
+| `scaleLabelSize`     | `double`            | `14`              | The size of the text for the scale labels.                                                             | `scaleLabelSize: 16`                      |
+| `scaleLabelWidth`    | `double`            | `40`              | The width of the text for the scale labels when axis is vertical.                                      | `scaleLabelWidth: 40`                     |
+| `scaleBottomPadding` | `double`            | `6`               | Padding below the scale labels, creating space between the labels and the bottom of the picker.        | `scaleBottomPadding: 8`                   |
+| `scaleItemWidth`     | `int`               | `10`              | The width of each scale item (i.e., the distance between the lines on the ruler).                      | `scaleItemWidth: 15`                      |
+| `onValueChanged`     | `ValueChanged<int>` | null              | Callback triggered whenever the selected value changes.                                                | `onValueChanged: (value) => print(value)` |
+| `longLineHeight`     | `double`            | `24`              | Height of the long lines in the ruler (typically for major units).                                     | `longLineHeight: 30`                      |
+| `shortLineHeight`    | `double`            | `12`              | Height of the short lines in the ruler (typically for minor units).                                    | `shortLineHeight: 15`                     |
+| `lineColor`          | `Color`             | `Colors.grey`     | Color of the ruler's lines (both long and short).                                                      | `lineColor: Colors.black`                 |
+| `selectedColor`      | `Color`             | `Colors.orange`   | Color of the selected item on the ruler.                                                               | `selectedColor: Colors.blue`              |
+| `labelColor`         | `Color`             | `Colors.grey`     | Color of the scale labels.                                                                             | `labelColor: Colors.black`                |
+| `lineStroke`         | `double`            | `2`               | The thickness (stroke width) of the ruler's lines.                                                     | `lineStroke: 3`                           |
+| `height`             | `double`            | `100`             | The overall height of the ruler picker.                                                                | `height: 120`                             |
+| `axis`               | `Axis`              | `Axis.horizontal` | The axis along which the picker scrolls.                                                               | `axis: Axis.horizontal`                   |
 
 ## Additional information
 
