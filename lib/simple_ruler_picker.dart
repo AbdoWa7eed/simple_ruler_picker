@@ -52,6 +52,9 @@ class SimpleRulerPicker extends StatefulWidget {
   /// The axis along which the picker scrolls.
   final Axis axis;
 
+  /// Whether to reverse the scroll direction.
+  final bool reverse;
+
   /// Creates a [SimpleRulerPicker] widget.
   ///
   /// The [minValue] must be less than or equal to [initialValue],
@@ -72,6 +75,7 @@ class SimpleRulerPicker extends StatefulWidget {
     this.selectedColor = Colors.orange,
     this.labelColor = Colors.grey,
     this.lineStroke = 2,
+    this.reverse = false,
     this.height = 100,
     this.axis = Axis.horizontal,
   }) : assert(
@@ -164,6 +168,7 @@ class _SimpleRulerPickerState extends State<SimpleRulerPicker> {
               onNotification: onNotification,
               child: LayoutBuilder(
                 builder: (context, constraints) => ListView.builder(
+                  reverse: widget.reverse,
                   padding: _isHorizontalAxis
                       ? EdgeInsets.only(
                           left: constraints.maxWidth / 2,
